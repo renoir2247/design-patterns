@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Menlo, monospace" font-size="12.5" width="780" height="470" viewBox="0 0 780 470">
+  <rect width="780" height="470" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="270" y="30" width="220" height="70" fill="#F3E8FD" stroke="#333" stroke-width="1.5"/>
+    <text x="380" y="52" text-anchor="middle" font-weight="bold">&#171;Subject&#187;</text>
+    <text x="380" y="72" text-anchor="middle" font-weight="bold">IBookingService</text>
+    <line x1="270" y1="82" x2="490" y2="82" stroke="#333"/>
+    <text x="280" y="96">+ confirm(ref)</text>
+  </g>
+
+  <g>
+    <rect x="60" y="180" width="250" height="95" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="185" y="204" text-anchor="middle" font-weight="bold">&#171;Proxy&#187;</text>
+    <text x="185" y="224" text-anchor="middle" font-weight="bold">BookingServiceProxy</text>
+    <line x1="60" y1="234" x2="310" y2="234" stroke="#333"/>
+    <text x="70" y="250">- role: String</text>
+    <text x="70" y="268">- inner: BookingServiceImpl</text>
+    <text x="70" y="286">+ confirm(ref) {проверка роли}</text>
+  </g>
+
+  <g>
+    <rect x="440" y="180" width="250" height="75" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="565" y="204" text-anchor="middle" font-weight="bold">&#171;RealSubject&#187;</text>
+    <text x="565" y="224" text-anchor="middle" font-weight="bold">BookingServiceImpl</text>
+    <line x1="440" y1="234" x2="690" y2="234" stroke="#333"/>
+    <text x="450" y="250">+ confirm(ref) {бизнес-логика}</text>
+  </g>
+
+  <line x1="185" y1="180" x2="320" y2="100" stroke="#333" stroke-width="1.5"/>
+  <polygon points="320,100 306,104 314,114" fill="none" stroke="#333" stroke-width="1.5"/>
+  <line x1="565" y1="180" x2="450" y2="100" stroke="#333" stroke-width="1.5"/>
+  <polygon points="450,100 442,112 456,112" fill="none" stroke="#333" stroke-width="1.5"/>
+  <line x1="310" y1="235" x2="440" y2="225" stroke="#333" stroke-width="1.5"/>
+  <polygon points="440,225 428,219 428,231" fill="#333"/>
+  <text x="375" y="216" text-anchor="middle">делегирует</text>
+
+  <g>
+    <rect x="270" y="330" width="220" height="95" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="380" y="354" text-anchor="middle" font-weight="bold">&#171;VirtualProxy&#187;</text>
+    <text x="380" y="374" text-anchor="middle" font-weight="bold">FlightLazyProxy</text>
+    <line x1="270" y1="384" x2="490" y2="384" stroke="#333"/>
+    <text x="280" y="400">- real: RealFlightLoader</text>
+    <text x="280" y="416">создание при первом</text>
+    <text x="280" y="432">обращении</text>
+  </g>
+
+  <g>
+    <rect x="510" y="330" width="235" height="75" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="627" y="354" text-anchor="middle" font-weight="bold">&#171;RealSubject&#187;</text>
+    <text x="627" y="374" text-anchor="middle" font-weight="bold">RealFlightLoader</text>
+    <line x1="510" y1="384" x2="745" y2="384" stroke="#333"/>
+    <text x="520" y="400">+ getFlightInfo(): String</text>
+  </g>
+  <line x1="510" y1="370" x2="490" y2="370" stroke="#333" stroke-width="1.5"/>
+  <polygon points="490,370 502,364 502,376" fill="#333"/>
+</svg>

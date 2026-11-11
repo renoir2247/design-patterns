@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Menlo, monospace" font-size="12.5" width="760" height="480" viewBox="0 0 760 480">
+  <rect width="760" height="480" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="30" y="40" width="230" height="130" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="145" y="64" text-anchor="middle" font-weight="bold">&#171;Facade&#187;</text>
+    <text x="145" y="84" text-anchor="middle" font-weight="bold">BookingFacade</text>
+    <line x1="30" y1="94" x2="260" y2="94" stroke="#333"/>
+    <text x="40" y="112">- search: FlightSearchService</text>
+    <text x="40" y="130">- seats: SeatReservationService</text>
+    <text x="40" y="148">- payment: PaymentService</text>
+    <text x="40" y="166">+ book(flight, passengers)</text>
+  </g>
+
+  <g>
+    <rect x="330" y="30" width="200" height="45" fill="#EEE" stroke="#333" stroke-width="1.5"/>
+    <text x="430" y="50" text-anchor="middle">FlightSearchService</text>
+    <line x1="330" y1="57" x2="530" y2="57" stroke="#333"/>
+  </g>
+  <g>
+    <rect x="330" y="100" width="200" height="45" fill="#EEE" stroke="#333" stroke-width="1.5"/>
+    <text x="430" y="120" text-anchor="middle">SeatReservationService</text>
+    <line x1="330" y1="127" x2="530" y2="127" stroke="#333"/>
+  </g>
+  <g>
+    <rect x="330" y="170" width="200" height="45" fill="#EEE" stroke="#333" stroke-width="1.5"/>
+    <text x="430" y="190" text-anchor="middle">PaymentService</text>
+    <line x1="330" y1="197" x2="530" y2="197" stroke="#333"/>
+  </g>
+  <line x1="260" y1="105" x2="330" y2="55" stroke="#333" stroke-width="1.5"/>
+  <line x1="260" y1="105" x2="330" y2="122" stroke="#333" stroke-width="1.5"/>
+  <line x1="260" y1="105" x2="330" y2="192" stroke="#333" stroke-width="1.5"/>
+
+  <g>
+    <rect x="30" y="260" width="230" height="90" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="145" y="284" text-anchor="middle" font-weight="bold">&#171;Flyweight&#187;</text>
+    <text x="145" y="304" text-anchor="middle" font-weight="bold">ServiceClass</text>
+    <line x1="30" y1="314" x2="260" y2="314" stroke="#333"/>
+    <text x="40" y="330">- name: String (неизменно)</text>
+    <text x="40" y="348">+ getServiceClass(): String</text>
+  </g>
+
+  <g>
+    <rect x="330" y="260" width="230" height="90" fill="#FDF6E3" stroke="#333" stroke-width="1.5"/>
+    <text x="445" y="284" text-anchor="middle" font-weight="bold">&#171;FlyweightFactory&#187;</text>
+    <text x="445" y="304" text-anchor="middle" font-weight="bold">TicketFactory</text>
+    <line x1="330" y1="314" x2="560" y2="314" stroke="#333"/>
+    <text x="340" y="330">- pool: Map&lt;String, ServiceClass&gt;</text>
+    <text x="340" y="348">+ get(name): ServiceClass</text>
+  </g>
+  <line x1="330" y1="305" x2="260" y2="305" stroke="#333" stroke-width="1.5"/>
+  <polygon points="260,305 272,299 272,311" fill="none" stroke="#333" stroke-width="1.5"/>
+
+  <g>
+    <rect x="30" y="390" width="230" height="60" fill="#F3E8FD" stroke="#333" stroke-width="1.5"/>
+    <text x="145" y="414" text-anchor="middle" font-weight="bold">Client (Task1)</text>
+    <line x1="30" y1="422" x2="260" y2="422" stroke="#333"/>
+  </g>
+  <line x1="145" y1="390" x2="145" y2="170" stroke="#333" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <line x1="145" y1="390" x2="145" y2="350" stroke="#333" stroke-width="1.5" stroke-dasharray="6 4"/>
+</svg>

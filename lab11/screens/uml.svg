@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Menlo, monospace" font-size="12" width="770" height="480" viewBox="0 0 770 480">
+  <rect width="770" height="480" fill="#FFFFFF"/>
+
+  <text x="385" y="26" text-anchor="middle" font-weight="bold">Стратегия</text>
+  <g>
+    <rect x="270" y="45" width="230" height="65" fill="#F3E8FD" stroke="#333" stroke-width="1.5"/>
+    <text x="385" y="69" text-anchor="middle" font-weight="bold">&#171;Strategy&#187;</text>
+    <text x="385" y="89" text-anchor="middle" font-weight="bold">DiscountStrategy</text>
+    <line x1="270" y1="97" x2="500" y2="97" stroke="#333"/>
+    <text x="280" y="113">+ apply(amount): BigDecimal</text>
+  </g>
+  <g>
+    <rect x="40" y="165" width="190" height="35" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="135" y="188" text-anchor="middle">NoDiscount</text>
+  </g>
+  <g>
+    <rect x="250" y="165" width="190" height="35" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="345" y="188" text-anchor="middle">GroupDiscount</text>
+  </g>
+  <g>
+    <rect x="460" y="165" width="190" height="35" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="555" y="188" text-anchor="middle">PromoDiscount</text>
+  </g>
+  <line x1="135" y1="165" x2="330" y2="110" stroke="#333" stroke-width="1.5"/>
+  <line x1="345" y1="165" x2="380" y2="110" stroke="#333" stroke-width="1.5"/>
+  <line x1="555" y1="165" x2="430" y2="110" stroke="#333" stroke-width="1.5"/>
+  <polygon points="385,110 399,116 391,126" fill="none" stroke="#333" stroke-width="1.5"/>
+
+  <g>
+    <rect x="270" y="245" width="230" height="75" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="385" y="269" text-anchor="middle" font-weight="bold">&#171;Context&#187;</text>
+    <text x="385" y="289" text-anchor="middle" font-weight="bold">PriceCalculator</text>
+    <line x1="270" y1="297" x2="500" y2="297" stroke="#333"/>
+    <text x="280" y="313">- strategy: DiscountStrategy</text>
+    <text x="280" y="329">+ setStrategy(s) / finalPrice()</text>
+  </g>
+  <line x1="385" y1="245" x2="385" y2="110" stroke="#333" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="395" y="230">strategy</text>
+
+  <text x="385" y="370" text-anchor="middle" font-weight="bold">Шаблонный метод</text>
+  <g>
+    <rect x="180" y="385" width="260" height="85" fill="#FDF6E3" stroke="#333" stroke-width="1.5"/>
+    <text x="310" y="409" text-anchor="middle" font-weight="bold">&#171;Abstract&#187;</text>
+    <text x="310" y="429" text-anchor="middle" font-weight="bold">PaymentProcessor</text>
+    <line x1="180" y1="437" x2="440" y2="437" stroke="#333"/>
+    <text x="190" y="452">+ process() {final, каркас}</text>
+    <text x="190" y="464"># validate() / withdraw()</text>
+  </g>
+  <g>
+    <rect x="500" y="385" width="230" height="85" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="615" y="409" text-anchor="middle">CardPaymentProcessor</text>
+    <line x1="500" y1="417" x2="730" y2="417" stroke="#333"/>
+    <text x="510" y="433">BankTransferProcessor</text>
+    <text x="510" y="449">(реализуют шаги)</text>
+  </g>
+  <line x1="440" y1="427" x2="500" y2="427" stroke="#333" stroke-width="1.5"/>
+  <polygon points="500,427 488,421 488,433" fill="none" stroke="#333" stroke-width="1.5"/>
+</svg>

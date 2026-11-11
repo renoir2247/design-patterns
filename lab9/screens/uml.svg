@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Menlo, monospace" font-size="12" width="770" height="470" viewBox="0 0 770 470">
+  <rect width="770" height="470" fill="#FFFFFF"/>
+
+  <text x="385" y="26" text-anchor="middle" font-weight="bold">Посредник</text>
+  <g>
+    <rect x="270" y="45" width="230" height="90" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="385" y="69" text-anchor="middle" font-weight="bold">&#171;Mediator&#187;</text>
+    <text x="385" y="89" text-anchor="middle" font-weight="bold">BookingMediator</text>
+    <line x1="270" y1="97" x2="500" y2="97" stroke="#333"/>
+    <text x="280" y="113">- eventLog: List&lt;String&gt;</text>
+    <text x="280" y="129">+ onPaymentPaid(txId)</text>
+  </g>
+
+  <g>
+    <rect x="40" y="200" width="200" height="45" fill="#EEE" stroke="#333" stroke-width="1.5"/>
+    <text x="140" y="222" text-anchor="middle">PaymentWebhook</text>
+    <line x1="40" y1="229" x2="240" y2="229" stroke="#333"/>
+  </g>
+  <g>
+    <rect x="285" y="200" width="200" height="45" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="385" y="222" text-anchor="middle">BookingService</text>
+    <line x1="285" y1="229" x2="485" y2="229" stroke="#333"/>
+  </g>
+  <g>
+    <rect x="530" y="200" width="200" height="45" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="630" y="222" text-anchor="middle">TicketService</text>
+    <line x1="530" y1="229" x2="730" y2="229" stroke="#333"/>
+  </g>
+  <line x1="140" y1="200" x2="320" y2="135" stroke="#333" stroke-width="1.5"/>
+  <polygon points="320,135 306,139 314,149" fill="#333"/>
+  <line x1="385" y1="200" x2="385" y2="135" stroke="#333" stroke-width="1.5"/>
+  <polygon points="385,135 379,147 391,147" fill="#333"/>
+  <line x1="630" y1="200" x2="450" y2="135" stroke="#333" stroke-width="1.5"/>
+  <polygon points="450,135 458,147 444,147" fill="#333"/>
+
+  <text x="385" y="290" text-anchor="middle" font-weight="bold">Снимок</text>
+  <g>
+    <rect x="150" y="310" width="220" height="100" fill="#FDF6E3" stroke="#333" stroke-width="1.5"/>
+    <text x="260" y="334" text-anchor="middle" font-weight="bold">&#171;Originator&#187;</text>
+    <text x="260" y="354" text-anchor="middle" font-weight="bold">Booking</text>
+    <line x1="150" y1="364" x2="370" y2="364" stroke="#333"/>
+    <text x="160" y="380">- status: String</text>
+    <text x="160" y="396">+ save(): BookingMemento</text>
+    <text x="160" y="404">+ restore(m)</text>
+  </g>
+  <g>
+    <rect x="450" y="310" width="220" height="100" fill="#F3E8FD" stroke="#333" stroke-width="1.5"/>
+    <text x="560" y="334" text-anchor="middle" font-weight="bold">&#171;Memento&#187;</text>
+    <text x="560" y="354" text-anchor="middle" font-weight="bold">BookingMemento</text>
+    <line x1="450" y1="364" x2="670" y2="364" stroke="#333"/>
+    <text x="460" y="380">+ reference: String</text>
+    <text x="460" y="396">+ status(): String</text>
+  </g>
+  <line x1="370" y1="360" x2="450" y2="360" stroke="#333" stroke-width="1.5"/>
+  <polygon points="450,360 438,354 438,366" fill="#333"/>
+</svg>

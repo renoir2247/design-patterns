@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Menlo, monospace" font-size="12.5" width="760" height="330" viewBox="0 0 760 330">
+  <rect width="760" height="330" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="40" y="50" width="230" height="90" fill="#EEE" stroke="#333" stroke-width="1.5"/>
+    <text x="155" y="74" text-anchor="middle" font-weight="bold">Client</text>
+    <text x="155" y="94" text-anchor="middle" font-weight="bold">PaymentServiceImpl</text>
+    <line x1="40" y1="104" x2="270" y2="104" stroke="#333"/>
+    <text x="50" y="120">+ submit(PaymentTask)</text>
+    <text x="50" y="136">+ future.get(): String</text>
+  </g>
+
+  <g>
+    <rect x="320" y="40" width="220" height="110" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="430" y="64" text-anchor="middle" font-weight="bold">&#171;Thread Pool&#187;</text>
+    <text x="430" y="84" text-anchor="middle" font-weight="bold">ExecutorService</text>
+    <line x1="320" y1="94" x2="540" y2="94" stroke="#333"/>
+    <text x="330" y="110">- pool-1-thread-1</text>
+    <text x="330" y="126">- pool-1-thread-2</text>
+    <text x="330" y="142">- pool-1-thread-3</text>
+  </g>
+
+  <g>
+    <rect x="590" y="60" width="140" height="60" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="660" y="84" text-anchor="middle" font-weight="bold">&#171;Task&#187;</text>
+    <text x="660" y="104" text-anchor="middle" font-weight="bold">PaymentTask</text>
+  </g>
+  <line x1="540" y1="95" x2="590" y2="95" stroke="#333" stroke-width="1.5"/>
+  <polygon points="590,95 578,89 578,101" fill="#333"/>
+
+  <line x1="270" y1="95" x2="320" y2="95" stroke="#333" stroke-width="1.5"/>
+  <polygon points="320,95 308,89 308,101" fill="#333"/>
+
+  <g>
+    <rect x="180" y="200" width="400" height="80" fill="#FDF6E3" stroke="#333" stroke-width="1.5"/>
+    <text x="380" y="224" text-anchor="middle" font-weight="bold">&#171;Future&#187;</text>
+    <text x="380" y="244" text-anchor="middle" font-weight="bold">Future&lt;String&gt;</text>
+    <line x1="180" y1="254" x2="580" y2="254" stroke="#333"/>
+    <text x="190" y="270">get() возвращает результат, когда задача выполнена</text>
+  </g>
+  <line x1="430" y1="150" x2="400" y2="200" stroke="#333" stroke-width="1.5" stroke-dasharray="6 4"/>
+</svg>

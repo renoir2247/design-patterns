@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Menlo, monospace" font-size="12.5" width="760" height="480" viewBox="0 0 760 480">
+  <rect width="760" height="480" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="250" y="30" width="260" height="112" fill="#F3E8FD" stroke="#333" stroke-width="1.5"/>
+    <text x="380" y="54" text-anchor="middle" font-weight="bold">&#171;Handler&#187;</text>
+    <text x="380" y="74" text-anchor="middle" font-weight="bold">ValidationHandler</text>
+    <line x1="250" y1="84" x2="510" y2="84" stroke="#333"/>
+    <text x="260" y="100">- next: ValidationHandler</text>
+    <text x="260" y="118">+ linkWith(next) / handle(req)</text>
+    <text x="260" y="128"># check(req): String</text>
+  </g>
+
+  <g>
+    <rect x="30" y="200" width="220" height="55" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="140" y="224" text-anchor="middle">PassengersNotEmptyHandler</text>
+    <line x1="30" y1="232" x2="250" y2="232" stroke="#333"/>
+  </g>
+  <g>
+    <rect x="270" y="200" width="220" height="55" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="380" y="224" text-anchor="middle">MaxPassengersHandler</text>
+    <line x1="270" y1="232" x2="490" y2="232" stroke="#333"/>
+  </g>
+  <g>
+    <rect x="510" y="200" width="220" height="55" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="620" y="224" text-anchor="middle">SeatsAvailableHandler</text>
+    <line x1="510" y1="232" x2="730" y2="232" stroke="#333"/>
+  </g>
+  <line x1="140" y1="200" x2="330" y2="130" stroke="#333" stroke-width="1.5"/>
+  <line x1="380" y1="200" x2="380" y2="130" stroke="#333" stroke-width="1.5"/>
+  <line x1="620" y1="200" x2="430" y2="130" stroke="#333" stroke-width="1.5"/>
+  <polygon points="380,130 394,136 386,146" fill="none" stroke="#333" stroke-width="1.5"/>
+
+  <g>
+    <rect x="250" y="320" width="260" height="80" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="380" y="344" text-anchor="middle" font-weight="bold">ValidationChain</text>
+    <line x1="250" y1="354" x2="510" y2="354" stroke="#333"/>
+    <text x="260" y="370">- first: ValidationHandler</text>
+    <text x="260" y="388">+ handle(req): String</text>
+  </g>
+  <line x1="380" y1="320" x2="380" y2="130" stroke="#333" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="390" y="300">first</text>
+
+  <g>
+    <rect x="30" y="330" width="180" height="60" fill="#FDF6E3" stroke="#333" stroke-width="1.5"/>
+    <text x="120" y="354" text-anchor="middle" font-weight="bold">BookingRequest</text>
+    <line x1="30" y1="362" x2="210" y2="362" stroke="#333"/>
+    <text x="40" y="378">passengers, seats</text>
+  </g>
+  <line x1="210" y1="360" x2="250" y2="360" stroke="#333" stroke-width="1.5"/>
+  <text x="230" y="350" text-anchor="middle">req</text>
+</svg>

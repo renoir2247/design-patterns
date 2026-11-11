@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Menlo, monospace" font-size="12" width="770" height="480" viewBox="0 0 770 480">
+  <rect width="770" height="480" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="270" y="30" width="220" height="65" fill="#F3E8FD" stroke="#333" stroke-width="1.5"/>
+    <text x="380" y="52" text-anchor="middle" font-weight="bold">&#171;Command&#187;</text>
+    <text x="380" y="72" text-anchor="middle" font-weight="bold">BookingCommand</text>
+    <line x1="270" y1="80" x2="490" y2="80" stroke="#333"/>
+    <text x="280" y="92">+ execute(): void</text>
+  </g>
+  <g>
+    <rect x="40" y="160" width="220" height="40" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="150" y="186" text-anchor="middle">CreateBookingCommand</text>
+  </g>
+  <g>
+    <rect x="280" y="160" width="220" height="40" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="390" y="186" text-anchor="middle">ConfirmPaymentCommand</text>
+  </g>
+  <g>
+    <rect x="520" y="160" width="220" height="40" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="630" y="186" text-anchor="middle">CancelBookingCommand</text>
+  </g>
+  <line x1="150" y1="160" x2="330" y2="95" stroke="#333" stroke-width="1.5"/>
+  <line x1="390" y1="160" x2="380" y2="95" stroke="#333" stroke-width="1.5"/>
+  <line x1="630" y1="160" x2="430" y2="95" stroke="#333" stroke-width="1.5"/>
+  <polygon points="380,95 394,101 386,111" fill="none" stroke="#333" stroke-width="1.5"/>
+
+  <g>
+    <rect x="270" y="250" width="220" height="80" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="380" y="274" text-anchor="middle" font-weight="bold">&#171;Invoker&#187;</text>
+    <text x="380" y="294" text-anchor="middle" font-weight="bold">BookingProcessor</text>
+    <line x1="270" y1="302" x2="490" y2="302" stroke="#333"/>
+    <text x="280" y="318">- queue: Deque&lt;Command&gt;</text>
+    <text x="280" y="336">+ submit(c) / processAll()</text>
+  </g>
+  <line x1="380" y1="250" x2="380" y2="95" stroke="#333" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="390" y="230">queue</text>
+
+  <text x="385" y="380" text-anchor="middle" font-weight="bold">Итератор</text>
+  <g>
+    <rect x="150" y="395" width="220" height="70" fill="#FDF6E3" stroke="#333" stroke-width="1.5"/>
+    <text x="260" y="417" text-anchor="middle" font-weight="bold">Booking</text>
+    <line x1="150" y1="425" x2="370" y2="425" stroke="#333"/>
+    <text x="160" y="440">- passengers: List&lt;String&gt;</text>
+    <text x="160" y="456">+ iterator(): Iterator&lt;String&gt;</text>
+  </g>
+  <g>
+    <rect x="450" y="395" width="220" height="70" fill="#FDF6E3" stroke="#333" stroke-width="1.5"/>
+    <text x="560" y="417" text-anchor="middle" font-weight="bold">&#171;interface&#187;</text>
+    <text x="560" y="437" text-anchor="middle" font-weight="bold">Iterator&lt;String&gt;</text>
+    <line x1="450" y1="445" x2="670" y2="445" stroke="#333"/>
+    <text x="460" y="460">+ next() / hasNext()</text>
+  </g>
+  <line x1="370" y1="430" x2="450" y2="430" stroke="#333" stroke-width="1.5"/>
+  <polygon points="450,430 438,424 438,436" fill="none" stroke="#333" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Menlo, monospace" font-size="13" width="760" height="560" viewBox="0 0 760 560">
+  <rect width="760" height="560" fill="#FFFFFF"/>
+
+  <!-- JwtService (Singleton) -->
+  <g>
+    <rect x="40" y="30" width="280" height="150" fill="#FDF6E3" stroke="#333" stroke-width="1.5"/>
+    <text x="180" y="52" text-anchor="middle" font-weight="bold">«Singleton»</text>
+    <text x="180" y="72" text-anchor="middle" font-weight="bold">JwtService</text>
+    <line x1="40" y1="82" x2="320" y2="82" stroke="#333"/>
+    <text x="50" y="102">- instance: JwtService</text>
+    <text x="50" y="120">- secretKey: String</text>
+    <line x1="40" y1="130" x2="320" y2="130" stroke="#333"/>
+    <text x="50" y="150">- JwtService()</text>
+    <text x="50" y="168">+ getInstance(): JwtService</text>
+  </g>
+
+  <!-- Client -->
+  <g>
+    <rect x="40" y="400" width="280" height="90" fill="#EEE" stroke="#333" stroke-width="1.5"/>
+    <text x="180" y="425" text-anchor="middle" font-weight="bold">AuthController</text>
+    <line x1="40" y1="435" x2="320" y2="435" stroke="#333"/>
+    <line x1="40" y1="450" x2="320" y2="450" stroke="#333"/>
+    <text x="50" y="470">+ login(): AuthResponse</text>
+  </g>
+  <line x1="180" y1="400" x2="180" y2="180" stroke="#333" stroke-width="1.5"/>
+  <polygon points="180,180 175,190 185,190" fill="#333"/>
+  <text x="190" y="300">1</text>
+
+  <!-- Booking (Builder product) -->
+  <g>
+    <rect x="430" y="250" width="300" height="230" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="580" y="272" text-anchor="middle" font-weight="bold">«Product»</text>
+    <text x="580" y="292" text-anchor="middle" font-weight="bold">Booking</text>
+    <line x1="430" y1="302" x2="730" y2="302" stroke="#333"/>
+    <text x="440" y="322">- bookingReference: String</text>
+    <text x="440" y="340">- status: BookingStatus</text>
+    <text x="440" y="358">- totalAmount: BigDecimal</text>
+    <text x="440" y="376">- expiresAt: LocalDateTime</text>
+    <line x1="430" y1="386" x2="730" y2="386" stroke="#333"/>
+    <text x="440" y="406">- Booking(builder: Builder)</text>
+    <text x="440" y="424">+ builder(): Booking.Builder</text>
+    <text x="440" y="442">+ toString(): String</text>
+  </g>
+
+  <!-- Builder -->
+  <g>
+    <rect x="430" y="30" width="300" height="170" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="580" y="52" text-anchor="middle" font-weight="bold">«Builder»</text>
+    <text x="580" y="72" text-anchor="middle" font-weight="bold">Booking.Builder</text>
+    <line x1="430" y1="82" x2="730" y2="82" stroke="#333"/>
+    <text x="440" y="102">- bookingReference: String</text>
+    <text x="440" y="120">- flight: String</text>
+    <text x="440" y="138">- totalAmount: BigDecimal</text>
+    <text x="440" y="156">- passengers: List&lt;String&gt;</text>
+    <line x1="430" y1="166" x2="730" y2="166" stroke="#333"/>
+    <text x="440" y="186">+ flight(v): Builder ...</text>
+  </g>
+
+  <!-- Builder -> Booking (creates) -->
+  <line x1="580" y1="200" x2="580" y2="250" stroke="#333" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <polygon points="580,250 575,240 585,240" fill="#333"/>
+  <text x="590" y="230">«create»</text>
+
+  <!-- Client -> Builder -->
+  <path d="M 320 445 C 380 445 380 115 430 115" fill="none" stroke="#333" stroke-width="1.5"/>
+  <polygon points="430,115 420,110 420,120" fill="#333"/>
+  <text x="340" y="430">использует</text>
+</svg>

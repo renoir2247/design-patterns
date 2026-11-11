@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Menlo, monospace" font-size="12.5" width="780" height="600" viewBox="0 0 780 600">
+  <rect width="780" height="600" fill="#FFFFFF"/>
+
+  <!-- Adapter -->
+  <text x="390" y="28" text-anchor="middle" font-weight="bold">Адаптер</text>
+
+  <g>
+    <rect x="30" y="50" width="220" height="70" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="140" y="72" text-anchor="middle" font-weight="bold">&#171;Target&#187;</text>
+    <text x="140" y="92" text-anchor="middle" font-weight="bold">PaymentGateway</text>
+    <line x1="30" y1="102" x2="250" y2="102" stroke="#333"/>
+    <text x="40" y="114">+ pay(card, amount): Result</text>
+  </g>
+
+  <g>
+    <rect x="290" y="50" width="230" height="70" fill="#E8F0FE" stroke="#333" stroke-width="1.5"/>
+    <text x="405" y="72" text-anchor="middle" font-weight="bold">&#171;Adapter&#187;</text>
+    <text x="405" y="92" text-anchor="middle" font-weight="bold">ExternalPaymentApiAdapter</text>
+    <line x1="290" y1="102" x2="520" y2="102" stroke="#333"/>
+    <text x="300" y="114">- api: ExternalPaymentApi</text>
+  </g>
+
+  <g>
+    <rect x="550" y="50" width="200" height="70" fill="#FDF6E3" stroke="#333" stroke-width="1.5"/>
+    <text x="650" y="72" text-anchor="middle" font-weight="bold">&#171;Adaptee&#187;</text>
+    <text x="650" y="92" text-anchor="middle" font-weight="bold">ExternalPaymentApi</text>
+    <line x1="550" y1="102" x2="750" y2="102" stroke="#333"/>
+    <text x="560" y="114">+ makeTransaction(...)</text>
+  </g>
+
+  <line x1="250" y1="85" x2="290" y2="85" stroke="#333" stroke-width="1.5"/>
+  <polygon points="250,85 262,79 262,91" fill="none" stroke="#333" stroke-width="1.5"/>
+  <line x1="520" y1="85" x2="550" y2="85" stroke="#333" stroke-width="1.5"/>
+  <polygon points="550,85 538,79 538,91" fill="#333"/>
+
+  <g>
+    <rect x="290" y="170" width="230" height="55" fill="#EEE" stroke="#333" stroke-width="1.5"/>
+    <text x="405" y="192" text-anchor="middle" font-weight="bold">Client (Task1)</text>
+    <line x1="290" y1="200" x2="520" y2="200" stroke="#333"/>
+  </g>
+  <line x1="405" y1="170" x2="405" y2="120" stroke="#333" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <polygon points="405,120 399,132 411,132" fill="none" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Bridge -->
+  <text x="390" y="270" text-anchor="middle" font-weight="bold">Мост</text>
+
+  <g>
+    <rect x="30" y="300" width="220" height="80" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="140" y="322" text-anchor="middle" font-weight="bold">&#171;Abstraction&#187;</text>
+    <text x="140" y="342" text-anchor="middle" font-weight="bold">Notification</text>
+    <line x1="30" y1="352" x2="250" y2="352" stroke="#333"/>
+    <text x="40" y="368"># sender: MessageSender</text>
+    <text x="40" y="380">+ send(recipient)</text>
+  </g>
+
+  <g>
+    <rect x="30" y="430" width="220" height="50" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="140" y="452" text-anchor="middle">BookingNotification</text>
+    <line x1="30" y1="460" x2="250" y2="460" stroke="#333"/>
+  </g>
+
+  <g>
+    <rect x="30" y="520" width="220" height="50" fill="#EDF7ED" stroke="#333" stroke-width="1.5"/>
+    <text x="140" y="542" text-anchor="middle">PaymentNotification</text>
+    <line x1="30" y1="550" x2="250" y2="550" stroke="#333"/>
+  </g>
+
+  <g>
+    <rect x="530" y="300" width="220" height="70" fill="#F3E8FD" stroke="#333" stroke-width="1.5"/>
+    <text x="640" y="322" text-anchor="middle" font-weight="bold">&#171;Implementor&#187;</text>
+    <text x="640" y="342" text-anchor="middle" font-weight="bold">MessageSender</text>
+    <line x1="530" y1="352" x2="750" y2="352" stroke="#333"/>
+    <text x="540" y="368">+ deliver(recipient, text)</text>
+  </g>
+
+  <g>
+    <rect x="530" y="430" width="220" height="50" fill="#F3E8FD" stroke="#333" stroke-width="1.5"/>
+    <text x="640" y="452" text-anchor="middle">EmailSender</text>
+    <line x1="530" y1="460" x2="750" y2="460" stroke="#333"/>
+  </g>
+
+  <g>
+    <rect x="530" y="520" width="220" height="50" fill="#F3E8FD" stroke="#333" stroke-width="1.5"/>
+    <text x="640" y="542" text-anchor="middle">SmsSender</text>
+    <line x1="530" y1="550" x2="750" y2="550" stroke="#333"/>
+  </g>
+
+  <!-- abstraction hierarchy -->
+  <line x1="140" y1="430" x2="140" y2="380" stroke="#333" stroke-width="1.5"/>
+  <polygon points="140,380 130,394 150,394" fill="none" stroke="#333" stroke-width="1.5"/>
+  <line x1="140" y1="520" x2="140" y2="480" stroke="#333" stroke-width="1.5"/>
+  <polygon points="140,480 130,494 150,494" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- implementor hierarchy -->
+  <line x1="640" y1="430" x2="640" y2="370" stroke="#333" stroke-width="1.5"/>
+  <polygon points="640,370 630,384 650,384" fill="none" stroke="#333" stroke-width="1.5"/>
+  <line x1="640" y1="520" x2="640" y2="480" stroke="#333" stroke-width="1.5"/>
+  <polygon points="640,480 630,494 650,494" fill="none" stroke="#333" stroke-width="1.5"/>
+  <!-- bridge link -->
+  <line x1="250" y1="330" x2="530" y2="330" stroke="#333" stroke-width="1.5"/>
+  <text x="390" y="322" text-anchor="middle">sender (мост)</text>
+</svg>
